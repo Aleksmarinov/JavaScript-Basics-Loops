@@ -1,0 +1,32 @@
+function logistics (input){
+let numberOfLoads = Number(input[0]);
+let loads = Number(input[1]);
+let loadBus = 0;
+let loadTrain = 0;
+let loadTruck = 0;
+
+for(let i = 0; i <= loads.lenght; i++){
+    loads[i]
+}
+if(loads[i] <= 3){
+    loadBus += loads[i];
+} else if (loads[i] >= 4 && loads[i] <= 11){
+    loadTruck += loads[i];
+} else if (loads[i] >= 12){
+    loadTrain += loads[i];
+}
+
+numberOfLoads += loads[i];
+
+let averagePrice = (loadBus * 200 + loadTruck * 175 + loadTrain * 120) / numberOfLoads;
+let busPercent = (loadBus / numberOfLoads) * 100;
+let truckPercent = (loadTruck / numberOfLoads) * 100;
+let trainPercent = (loadTrain / numberOfLoads) * 100;
+
+console.log(`${averagePrice.toFixed(2)}`);
+console.log(`${loadBus.toFixed(2)}`);
+console.log(`${loadTruck.toFixed(2)}`);
+console.log(`${loadTrain.toFixed(2)}`);
+}
+
+logistics(["4","1","5","16","3"])
