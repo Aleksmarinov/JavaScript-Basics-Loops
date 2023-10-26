@@ -1,6 +1,0 @@
-function accessingValues(input) {
-const shoppingCart = { banana: 2, apple: 5, cherry: 0 };
-
-for (const fruit in shoppingCart) {
-  console.log(shoppingCart[fruit]);
-}
