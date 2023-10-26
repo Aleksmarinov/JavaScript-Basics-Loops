@@ -1,9 +1,0 @@
-function nums1Step3 (input) {
-    let n = Number(input[0]);
-    let i = Number(input[1]);
-
-    for (i = 1; i <= n; i += 3) {
-        console.log(i);
-    }
-}
-nums1Step3(["10"])
