@@ -1,2 +1,2 @@
-# For Loops and Nested For Loops JS Exercises
-JavaScript For Loops
+# This are my exercises For loops and nested for loops written on JavaScript.
+
