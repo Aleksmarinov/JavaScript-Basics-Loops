@@ -1,0 +1,38 @@
+function christmasGifts(input) {
+
+let index = 1;
+let command = Number(input[index]);
+let age = 0;
+let toyPrice = 5;
+let sweaterPrice = 15;
+let countYears = 0;
+let toysMoney = 0;
+let countAboveYears = 0;
+let sweaterMoney = 0;
+
+while (command !== 'Christmas') {
+    let age = Number(command);
+    if (age <= 16) {
+        countYears++;
+        toysMoney += toyPrice;
+    } else if (age > 16) {
+        countAboveYears++;
+        sweaterMoney += sweaterPrice;
+    }
+    command = input[index++];
+}
+
+console.log(`Number of adults: ${countAboveYears}`);
+console.log(`Number of kids: ${countYears}`);
+console.log(`Money for toys: ${toysMoney}`);
+console.log(`Money for sweaters: ${sweaterMoney}`);
+}
+christmasGifts
+(["16",
+"20",
+"46",
+"12",
+"8",
+"20",
+"49",
+"Christmas"])
