@@ -1,0 +1,28 @@
+function puppyCare(input) {
+
+let foodInGrams = Number(input[0]) * 1000;
+let eatenFood = 0;
+let index = 1;
+let command = input[index];
+
+while (command !== "Adopted") {
+    let gramsFood = Number(command);
+    eatenFood += gramsFood;
+    index++;
+    command = input[index];
+}
+
+if (foodInGrams > eatenFood) {
+    console.log(`Food is not enough. You need ${foodInGrams - eatenFood} grams more.`);
+} else {
+    console.log(`Food is enough! Leftovers: ${eatenFood - foodInGrams} grams.`);
+}
+}
+puppyCare(["2",
+"999",
+"456",
+"999",
+"999",
+"123",
+"456",
+"Adopted"])
