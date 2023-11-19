@@ -1,0 +1,42 @@
+
+function calculateProfit(input) {
+
+let index = 0;
+let seaTrips = Number(input[index]);
+let mountainTrips = Number(input[index]);
+let packageName = input[index];
+let seaPrice = 680;
+let mountainPrice = 499;
+let totalProfit = 0;
+
+while (packageName !== 'Stop') {
+    let package = String(packageName);
+    index++;
+    package += packageName;
+
+    if (packageName === "sea" && seaTrips > 0) {
+        totalProfit += seaPrice;
+        seaTrips--;
+        continue;
+
+    } else if (packageName === "mountain" && mountainTrips > 0) {
+        totalProfit += mountainPrice;
+        mountainTrips--;
+        continue;
+    }
+
+}
+
+if (seaTrips === 0 && mountainTrips === 0) {
+    console.log("Good job! Everything is sold.");
+}
+
+console.log(`Profit: ${totalProfit} leva.`);
+}
+calculateProfit(["2",
+"2",
+"sea",
+"mountain",
+"sea",
+"sea",
+"mountain"])
