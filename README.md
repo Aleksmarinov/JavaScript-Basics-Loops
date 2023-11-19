@@ -1,2 +1,2 @@
-# This are my exercises from the JavaScript Basic Course from SoftUni --> For loops and nested for loops written on JavaScript.
+# This are my exercises from the JavaScript Basic Course from SoftUni --> For loops, While loops and Nested loops written on JavaScript.
 
