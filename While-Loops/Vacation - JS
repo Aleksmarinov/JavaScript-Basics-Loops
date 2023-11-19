@@ -1,0 +1,44 @@
+function vacation(input) {
+
+let index = 0;
+let moneyForExcursion = Number(input[index]);
+index++;
+let moneyOnHand = Number(input[index]);
+index++;
+let daysSpending = 0;
+let daysCount = 0;
+
+while (daysSpending < 5) {
+    let action = String(input[index]);
+    index++;
+    let money = Number(input[index]);
+    index++;
+    daysCount++;
+
+    if (action === 'spend') {
+        moneyOnHand += money;
+        daysSpending += 1;
+        daysCount++;
+    } else {
+        moneyOnHand -= money;
+        daysSpending = 0;
+        daysCount++;
+    }
+
+    if (daysSpending === 5) {
+        console.log(`You can't save the money.`);
+        console.log(daysSpending);
+        break;
+    }
+
+    if (moneyOnHand >= moneyForExcursion) {
+        console.log(`You saved the money for ${daysCount} days.`)
+    }
+}
+}
+vacation(["2000",
+"1000",
+"spend",
+"1200",
+"save",
+"2000"])
